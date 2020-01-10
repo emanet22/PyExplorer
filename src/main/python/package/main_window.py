@@ -67,10 +67,10 @@ class MainWindow(QtWidgets.QMainWindow):
         self.tree_view.clicked.connect(self.treeview_clicked)
         self.list_view.clicked.connect(self.listview_clicked)
         self.list_view.doubleClicked.connect(self.listview_double_clicked)
-        #self.sld_iconSize.ValueChanged.connect(self.change_icon_size)
+        self.sld_iconSize.valueChanged.connect(self.change_icon_size)
 
     def change_icon_size(self, value):
-        self.list_view.setIconSize(QtCore.QSize(Value, Value))
+        self.list_view.setIconSize(QtCore.QSize(value, value))
         # Value = récupère la valeur du slide (test possible avec un print(value))
 
 
